@@ -12,7 +12,7 @@ This project is a Document Management System developed using Java Spring and Spr
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/document-management-system.git
+   git clone https://github.com/alshaikhshariq/Document-Management-System.git
 
 2. Build the project using Gradle:
 
@@ -46,7 +46,6 @@ This application adheres to the following non-functional requirements:
 2. **Document Format**: The system supports the PDF format for uploaded documents. Users can upload PDF documents and perform various actions on them.
 3. **Separation of Front-End and Back-End**: The front-end part of the system will be developed by a dedicated team. The provided APIs are meant to serve as the back-end functionality to be consumed by the front-end. The APIs provide the necessary functionality for document management, posts, and comments.
 4. **Java Spring Implementation**: The system is implemented using Java Spring, which provides a robust framework for building scalable and reliable applications. It leverages the Spring Boot framework for easy setup and configuration.
-5. **Git Repository Delivery**: The final deliverable will be shared with the Tech Lead through a Git repository. The repository will contain the complete source code, including the necessary configuration files and documentation.
 
 
 ## Testing
