@@ -16,12 +16,9 @@ public class Document {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
     @Lob
     @Column(nullable = false)
     private byte[] file;
-    // Other fields
-
     @OneToOne(mappedBy = "document")
     private Post post;
 }

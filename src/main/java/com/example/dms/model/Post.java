@@ -19,8 +19,6 @@ public class Post {
     private String body;
     private String userId;
 
-    // Other fields
-
     @OneToOne
     @JoinColumn(name = "document_id")
     private Document document;

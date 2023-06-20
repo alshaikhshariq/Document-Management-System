@@ -12,12 +12,18 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ThirdPartyApiService {
 
-    public Post createPost(Document document) {
+
+    /**
+     * Create posts call
+     *
+     * @return
+     */
+    public Post createPost() {
 
         RestTemplate restTemplate = new RestTemplate();
         // Make the POST request to create the post
         ResponseEntity<Post> response = restTemplate.postForEntity(
-                AppConstants.BASE_API + AppConstants.CREATE_POSTS,
+                AppConstants.BASE_API + AppConstants.POSTS,
                 new Post(), // Pass the necessary data
                 Post.class
         );
@@ -30,15 +36,18 @@ public class ThirdPartyApiService {
         }
     }
 
+    /**
+     * @param postId
+     * @return
+     */
     public Post getPost(Long postId) {
         RestTemplate restTemplate = new RestTemplate();
 
         // Make the GET request to retrieve the post
         ResponseEntity<Post> response = restTemplate.getForEntity(
-                "https://jsonplaceholder.typicode.com/posts/{postId}",
+                AppConstants.BASE_API + AppConstants.POSTS + "/{postId}",
                 Post.class,
-                postId
-        );
+                postId);
 
         if (response.getStatusCode() == HttpStatus.OK) {
             return response.getBody();
@@ -48,12 +57,16 @@ public class ThirdPartyApiService {
         }
     }
 
+    /**
+     * @param comment
+     * @return
+     */
     public Comment createComment(Comment comment) {
         RestTemplate restTemplate = new RestTemplate();
 
         // Make the POST request to create the comment
         ResponseEntity<Comment> response = restTemplate.postForEntity(
-                "https://jsonplaceholder.typicode.com/comments",
+                AppConstants.BASE_API + AppConstants.COMMENTS,
                 comment,
                 Comment.class
         );
