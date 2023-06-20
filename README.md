@@ -12,7 +12,7 @@ This project is a Document Management System developed using Java Spring and Spr
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/document-management-system.git
+   git clone https://github.com/alshaikhshariq/Document-Management-System.git
 
 2. Build the project using Gradle:
 
